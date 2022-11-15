@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dodo Newsletter</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,300&display=swap");
+
+    
+      /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+      
+      /*All the styling goes here*/
+      
+      img {
+        border: none;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%; 
+      }
+
+      body {
+        background-color: #F5ECDD;
+        font-family: sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%; 
+      }
+
+      table {
+        border-collapse: separate;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        width: 100%; }
+        table td {
+          font-family: sans-serif;
+          font-size: 14px;
+          vertical-align: top; 
+      }
+
+      /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+
+      .body {
+        background-color: #F5ECDD;
+        width: 100%; 
+      }
+
+      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+      .container {
+        display: block;
+        margin: 0 auto !important;
+        /* makes it centered */
+        max-width: 580px;
+        padding: 10px;
+        width: 580px; 
+      }
+
+      /* This should also be a block element, so that it will fill 100% of the .container */
+      .content {
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        max-width: 580px;
+        padding: 10px; 
+      }
+
+      /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+      .main {
+        background: #ffffff;
+        border-radius: 3px;
+        width: 100%; 
+      }
+
+      .wrapper {
+        box-sizing: border-box;
+        padding: 20px; 
+      }
+
+      .content-block {
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+
+      .footer {
+        clear: both;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%; 
+      }
+        .footer td,
+        .footer p,
+        .footer span,
+        .footer a {
+          color: #999999;
+          font-size: 12px;
+          text-align: center; 
+      }
+
+      /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #000000;
+        font-family: sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+        margin-bottom: 30px; 
+      }
+
+      h1 {
+        font-size: 35px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: capitalize; 
+      }
+
+      p,
+      ul,
+      ol {
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 15px; 
+      }
+        p li,
+        ul li,
+        ol li {
+          list-style-position: inside;
+          margin-left: 5px; 
+      }
+
+      a {
+        color: #167070;
+        text-decoration: underline; 
+      }
+
+      /* -------------------------------------
+          BUTTONS
+      ------------------------------------- */
+      .btn {
+        box-sizing: border-box;
+        width: 100%; }
+        .btn > tbody > tr > td {
+          padding-bottom: 15px; }
+        .btn table {
+          width: auto; 
+      }
+        .btn table td {
+          background-color: #ffffff;
+          border-radius: 5px;
+          text-align: center; 
+      }
+        .btn a {
+          background-color: #ffffff;
+          border: solid 1px #167070;
+          border-radius: 5px;
+          box-sizing: border-box;
+          color: #167070;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: bold;
+          margin: 0;
+          padding: 12px 25px;
+          text-decoration: none;
+          text-transform: capitalize; 
+      }
+
+      .btn-primary table td {
+        background-color: #167070; 
+      }
+
+      .btn-primary a {
+        background-color: #167070;
+        border-color: #167070;
+        color: #ffffff; 
+      }
+
+      /* -------------------------------------
+          OTHER STYLES THAT MIGHT BE USEFUL
+      ------------------------------------- */
+      .last {
+        margin-bottom: 0; 
+      }
+
+      .first {
+        margin-top: 0; 
+      }
+
+      .align-center {
+        text-align: center; 
+      }
+
+      .align-right {
+        text-align: right; 
+      }
+
+      .align-left {
+        text-align: left; 
+      }
+
+      .clear {
+        clear: both; 
+      }
+
+      .mt0 {
+        margin-top: 0; 
+      }
+
+      .mb0 {
+        margin-bottom: 0; 
+      }
+
+      .preheader {
+        color: transparent;
+        display: none;
+        height: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        mso-hide: all;
+        visibility: hidden;
+        width: 0; 
+      }
+
+      .powered-by a {
+        text-decoration: none; 
+      }
+
+      hr {
+        border: 0;
+        border-bottom: 1px solid #F5ECDD;
+        margin: 20px 0; 
+      }
+
+      /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+      @media only screen and (max-width: 620px) {
+        table.body h1 {
+          font-size: 28px !important;
+          margin-bottom: 10px !important; 
+        }
+        table.body p,
+        table.body ul,
+        table.body ol,
+        table.body td,
+        table.body span,
+        table.body a {
+          font-size: 16px !important; 
+        }
+        table.body .wrapper,
+        table.body .article {
+          padding: 10px !important; 
+        }
+        table.body .content {
+          padding: 0 !important; 
+        }
+        table.body .container {
+          padding: 0 !important;
+          width: 100% !important; 
+        }
+        table.body .main {
+          border-left-width: 0 !important;
+          border-radius: 0 !important;
+          border-right-width: 0 !important; 
+        }
+        table.body .btn table {
+          width: 100% !important; 
+        }
+        table.body .btn a {
+          width: 100% !important; 
+        }
+        table.body .img-responsive {
+          height: auto !important;
+          max-width: 100% !important;
+          width: auto !important; 
+        }
+      }
+
+      /* -------------------------------------
+          PRESERVE THESE STYLES IN THE HEAD
+      ------------------------------------- */
+      @media all {
+        .ExternalClass {
+          width: 100%; 
+        }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+          line-height: 100%; 
+        }
+        .apple-link a {
+          color: inherit !important;
+          font-family: inherit !important;
+          font-size: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+          text-decoration: none !important; 
+        }
+        #MessageViewBody a {
+          color: inherit;
+          text-decoration: none;
+          font-size: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+        }
+        .btn-primary table td:hover {
+          background-color: #34495e !important; 
+        }
+        .btn-primary a:hover {
+          background-color: #34495e !important;
+          border-color: #34495e !important; 
+        } 
+      }
+
+
+
+:root {
+  --shadow-color: 38deg 24% 38%;
+
+  --shadow: -0.2px 0.3px 0.4px hsl(var(--shadow-color) / 0.36),
+    -0.5px 0.9px 1.2px -0.8px hsl(var(--shadow-color) / 0.36),
+    -1.3px 2.4px 3.1px -1.7px hsl(var(--shadow-color) / 0.36),
+    -3.1px 5.8px 7.4px -2.5px hsl(var(--shadow-color) / 0.36);
+
+  --dropshadow: drop-shadow(2px 2px 2px hsl(var(--shadow-color)));
+
+  --white: #fff;
+  --cream: #f5ecdd;
+  --cream-gradient: linear-gradient(
+    324deg,
+    rgba(248, 239, 224, 1) 34%,
+    rgba(241, 243, 229, 1) 60%
+  );
+  --yellow: #fec408;
+  --red: #f47967;
+  --pink: #ff6faa;
+  --lightgreen: #05a88d;
+  --darkgreen: #167070;
+  --blackgreen: #3b432e;
+}
+
+/* reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* dodo specific */
+body {
+  background-color: var(--cream);
+
+  /* font-family: "Comic Neue", cursive; */
+  font-family: "Roboto", "Arial", sans-serif;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bangers", cursive;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+h1 {
+  font-size: 10rem;
+  color: var(--red);
+  text-align: left;
+  /* transform: rotate(-10deg);
+    transform-origin: center left; */
+  transform: skewY(-11deg);
+  filter: var(--dropshadow);
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+  /* font-family: "Roboto","Arial",sans-serif; */
+  font-weight: bold;
+}
+
+summary {
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+details p {
+  padding: 1rem;
+}
+
+hr {
+  border: dotted var(--darkgreen) 5px;
+  border-width: 5px 0 0;
+  margin: 1rem 0;
+}
+
+.all-title {
+  width: fit-content;
+  color: var(--red);
+  display: block;
+}
+.sub-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--red);
+  font-family: "Bangers", cursive;
+
+  /* background-color: var(--blackgreen); */
+}
+.over {
+  position: relative;
+  top: 2rem;
+  padding-left: 5rem;
+}
+.under {
+  text-align: right;
+  position: relative;
+  bottom: 2rem;
+  padding-right: 5rem;
+}
+
+section {
+  padding: 1rem 4rem 4rem;
+  position: relative;
+  /* display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around; */
+  /* border: solid 2px black; */
+}
+
+#about {
+  padding-top: 7rem;
+  display: block;
+}
+
+#about .cta {
+  display: grid;
+  place-items: center;
+  margin: 2rem;
+}
+
+#main-menu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: var(--darkgreen);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+#main-menu li {
+  float: left;
+  padding: 1rem;
+}
+
+#main-menu a {
+  color: var(--cream);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+#main-menu a:hover {
+  color: var(--lightgreen);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.two-dodoes {
+  float: right;
+  position: relative;
+  top: -8rem;
+  right: -5rem;
+  width: 680px;
+  aspect-ratio: 1 / 1;
+  z-index: -1;
+}
+
+.shape-under {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 50% 200px 100% 10%;
+  transform: rotate(20deg);
+  background-color: var(--lightgreen);
+}
+
+.monitor {
+  width: 580px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.video-screen {
+  width: 428px;
+  height: 275px;
+  /* width: 100%;
+    height: 100%; */
+  position: absolute;
+  right: 77px;
+  top: 20px;
+}
+
+.birds {
+  width: 500px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.all-faq {
+  width: 50vw;
+  line-height: 1.5;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.all-form {
+  margin: auto;
+  width: 80vw;
+  min-width: 60ch;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.all-form form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.all-form .sub-title {
+  padding: 1rem;
+}
+
+.all-form input {
+  padding: 0.6rem;
+  margin: 0.6rem;
+  border: solid 1px var(--blackgreen);
+  border-radius: 5px;
+}
+
+.all-form .name-area {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.all-form .button-area {
+  align-self: center;
+}
+
+#clippy-question {
+  margin-left: 0;
+  position: fixed;
+  bottom: 6rem;
+  left: 0;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  background-color: var(--lightgreen);
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  border-radius: 0 0 1rem 1rem;
+  cursor: pointer;
+  color: var(--cream);
+  display: grid;
+  place-items: center;
+}
+#clippy {
+  display: none;
+
+  position: fixed;
+  top: 60%;
+  border-left: 0;
+  width: 400px;
+  min-height: 400px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background: radial-gradient(
+    ellipse at bottom left,
+    rgba(120, 103, 74, 0.5) 31%,
+    transparent 70%
+  );
+}
+
+#clippy .image {
+  width: 200px;
+  height: 400px;
+  background-image: url(../images/dodo-clippy.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* border: solid 2px black; */
+}
+
+#clippy .bubble {
+  /* border: solid 2px black; */
+  border-radius: 5px;
+  background-color: var(--white);
+  width: 200px;
+  height: 50px;
+  /* box-shadow: var(--shadow); */
+  filter: var(--dropshadow);
+  display: grid;
+  place-content: center;
+  padding: 10px 5px 10px 5px;
+  z-index: 2;
+}
+
+#clippy .left-bubble {
+  transform: rotate(2deg);
+  transform-origin: bottom left;
+  position: relative;
+  left: 10px;
+  /* top: -20%; */
+}
+
+#clippy .left-bubble:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid transparent;
+  border-right: 12px solid var(--white);
+  border-top: 24px solid transparent;
+  border-bottom: 12px solid var(--white);
+  left: 2px;
+  bottom: -5px;
+  z-index: -1;
+  border-radius: 5px;
+  transform: rotate(-20deg);
+}
+
+#clippy .right-bubble {
+  background-color: var(--lightgreen);
+  transform: rotate(-2deg);
+  transform-origin: bottom right;
+  position: relative;
+  right: 10px;
+  bottom: -30px;
+  /* top: -20%; */
+}
+
+#clippy .right-bubble input {
+  background-color: var(--lightgreen);
+}
+
+#clippy .right-bubble:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-right: 24px solid transparent;
+  border-left: 12px solid var(--lightgreen);
+  border-top: 24px solid transparent;
+  border-bottom: 12px solid var(--lightgreen);
+  right: 2px;
+  bottom: -5px;
+  z-index: -1;
+  border-radius: 5px;
+  transform: rotate(20deg);
+}
+
+#clippy .x-bubble {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: -1rem;
+  top: -2rem;
+  /* float: right;
+    clear:all; */
+}
+
+#clippy .x-bubble:hover {
+  cursor: pointer;
+}
+
+/* #clippy .left-bubble:before,
+#clippy .left-bubble:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+#clippy .left-bubble:before{
+    left: 30px;
+	bottom: -50px;
+	border: 25px solid;
+	border-color: #333 transparent transparent #333;
+}
+#clippy .left-bubble:after {
+	left: 38px;
+	bottom: -30px;
+	border: 15px solid;
+	border-color: #fff transparent transparent #fff;
+
+} */
+
+#tickets {
+  padding-top: 3rem;
+}
+
+#tickets h2 {
+  margin-bottom: 2rem;
+}
+
+.all-tickets {
+  /* clear: both; */
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.ticket-card {
+  background-color: var(--red);
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  padding: 1rem;
+  min-width: 30ch;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.speaker {
+  background-color: var(--lightgreen);
+}
+
+.ticket-card h3 {
+  padding: 2rem;
+}
+
+.ticket-card button {
+  padding: 2rem;
+  /* align-self: flex-end;
+
+  justify-self: center; */
+}
+
+.ticket-card .frontbtn {
+  background-color: var(--darkgreen);
+}
+/* .ticket-card ul{
+list-style-type: disc;
+} */
+
+.ticket-card li {
+  padding: 0.2rem;
+}
+
+#lectures .sub-title {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+/* carousel */
+.infinite-carousel {
+  position: relative;
+  overflow: hidden;
+  clear: both;
+
+  height: 12rem;
+
+  /* @include transform( scale3d(1,1,1) ); */
+}
+
+.slide {
+  float: left;
+  width: 10rem;
+  height: 10rem;
+
+  /* background: var(--white); */
+
+  /* background: #666;
+  color:#aaa; */
+}
+
+.slide-enable-animation {
+  transition: all 0.5s ease-in-out;
+}
+
+.inside-slide {
+  box-shadow: var(--shadow);
+  border: solid black 1px;
+  border-radius: 5px;
+  background-color: var(--darkgreen);
+  color: var(--white);
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.carousel-viewport .title {
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.carousel-viewport .person {
+  font-weight: italic;
+  padding-top: 1rem;
+  padding: 0.5rem;
+}
+
+.carousel-control-previous,
+.carousel-control-next {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  cursor: pointer;
+
+  /* background: var(--darkgreen);
+  color: var(--cream); */
+  font-weight: bold;
+
+  line-height: 40px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.carousel-control-previous {
+  left: 0;
+  right: auto;
+}
+.carousel-control-next {
+  left: auto;
+  right: 0;
+}
+/* end carousel */
+
+#contact {
+  text-align: center;
+}
+
+.association {
+  font-size: 1.5rem;
+}
+
+.contact-all {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.details,
+.map {
+  line-height: 2;
+  font-weight: bold;
+  text-align: right;
+}
+
+.map {
+  width: 60%;
+}
+
+/* BUTTON */
+button {
+  margin: 0.5rem;
+}
+
+.pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0px;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+}
+
+.shadow {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  background: var(--halfdark);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  background: var(--shadow);
+}
+
+.frontbtn {
+  display: block;
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 7px;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--white);
+  background: #41b091;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.pushable:hover {
+  filter: brightness(110%);
+}
+
+.pushable:hover .frontbtn {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .frontbtn {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.custom{
+    border:#000000 1px solid;
+    border-radius: 5px;
+}
+
+    </style>
+  </head>
+  <body>
+    <table style="width:100%;background:#f5ecdd">
+  <table>
+
+    <table style="width:80%;text-align:center">
+        <h2>Dodo Newsletter</h2>
+        
+    <table  style="margin:auto;width:80%;background-color:#05a88d">
+        <tr><td colspan="2" style="background:#f5ecdd">        <p style="font-weight:bold;width:fit-content;text-align:center;padding:0.5rem 1rem">November 2022</p>
+            <p style="padding:0.5rem 1rem;">We’re all hoping for a very happy and healthy autumn this year, with plenty of quality time with our pets. Make sure your dodo stays safe and well this season with our essential advice on avoiding the season’s top health hazards. And we translate our birds' most common vocalisations and find out what they’re really trying to say.</p><p>&nbsp;</p></td></tr>
+            <tr>
+            <td style="background:url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oxford_Dodo_display.jpg/1920px-Oxford_Dodo_display.jpg);background-size:cover"></td>
+            <td><h3>Article Title</h3><p style="padding:1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloribus iste inventore nihil ducimus ex! Corrupti, ratione. Explicabo quam harum deserunt? Repellendus, ad nobis! Fugit amet sequi perferendis eius temporibus?</p></td>
+        </tr>
+
+
+        <tr><td colspan="2" style="background:#f5ecdd;height:2rem;">
+        </td></tr>
+
+        <tr>
+            <td><h3>Article Title</h3><p style="padding:1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloribus iste inventore nihil ducimus ex! Corrupti, ratione. Explicabo quam harum deserunt? Repellendus, ad nobis! Fugit amet sequi perferendis eius temporibus?</p></td>
+            <td style="background:url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/DodoMansur.jpg/800px-DodoMansur.jpg);background-size:cover"></td>
+
+        </tr>
+        <tr><td colspan="2" style="background:#f5ecdd;height:2rem;">
+        </td></tr>
+
+        <tr>
+            <td style="background:url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Lophopsittacus.mauritianus.jpg/1920px-Lophopsittacus.mauritianus.jpg);background-size:cover"></td>
+            <td><h3>Article Title</h3><p style="padding:1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloribus iste inventore nihil ducimus ex! Corrupti, ratione. Explicabo quam harum deserunt? Repellendus, ad nobis! Fugit amet sequi perferendis eius temporibus?</p></td>
+        </tr>
+        <tr><td colspan="2" style="background:#f5ecdd;height:2rem;">
+        </td></tr>
+
+        <tr>
+            <td><h3>Article Title</h3><p style="padding:1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloribus iste inventore nihil ducimus ex! Corrupti, ratione. Explicabo quam harum deserunt? Repellendus, ad nobis! Fugit amet sequi perferendis eius temporibus?</p></td>
+            <td style="background:url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Copenhagen_dodo.jpg/1920px-Copenhagen_dodo.jpg);background-size:cover"></td>
+
+        </tr>
+    </table>
+
+
+            <!-- START FOOTER -->
+            <div class="footer">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="content-block">
+                      <span class="apple-link">The Dodo Breeders Association, Nascot Wood Rd, Watford WD17 4SL</span>
+                      <br> Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif">Unsubscribe</a>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="content-block powered-by">
+                      Powered by <a href="http://htmlemail.io">HTMLemail</a>.
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!-- END FOOTER -->
+
+</table>
+</table>
+  </body>
+</html>

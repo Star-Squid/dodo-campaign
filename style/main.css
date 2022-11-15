@@ -529,6 +529,7 @@ list-style-type: disc;
 }
 
 .inside-slide {
+  height: 100%;
   box-shadow: var(--shadow);
   border: solid black 1px;
   border-radius: 5px;
